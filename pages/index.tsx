@@ -29,7 +29,7 @@ export default function Home() {
 { isAuthenticated &&   
  <main className="w-full flex flex-col justify-center items-center">
    <Navbar/>
-<span className='text-5xl text-gray-700 font-bold my-16 font-raleway'> Welcome to Home Page</span>
+<span className='lg:text-5xl text-2xl text-gray-700 font-bold my-16 font-raleway'> Welcome to Home Page</span>
 <Image src={pic} alt="" className='' width={600} height={600}/>
  </main>}
 </>

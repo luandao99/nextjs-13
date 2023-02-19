@@ -15,13 +15,21 @@ const Login = () => {
 
   },[isAuthenticated, router])
   return (
-    !isAuthenticated && <div className='w-full flex flex-col justify-center items-center h-screen bg-white font-raleway'>
-      <span className='text-6xl text-gray-700 font-bold my-12 px-5'> Welcome Coders...</span>
+    !isAuthenticated && <div className='w-full flex flex-col justify-center items-center h-full lg:h-screen bg-white font-raleway'>
+      <span className='lg:text-6xl text-3xl text-gray-700 font-bold my-20 lg:my-12 px-5'> Welcome Coders...</span>
 
       <div className='flex justify-center items-center w-full lg:flex-row flex-col'>
         <Image src={giphy} alt="" width={700} height={700}/>
-        <div className='relative w-2/12'>
+        <div className='relative lg:block hidden w-2/12'>
           <button onClick={()=>signIn("github", {callbackUrl:"http://localhost:3000"})} className='text-2xl text-black bg-slate-50 my-12 px-6 py-6 absolute -mx-20 hover:bg-sky-600
+          rounded flex justify-center items-center gap-5 shadow font-bold transition ease-in-out delay-150 hover:scale-110 
+          hover:text-white duration-300'>
+            <BsGithub className='w-10 h-10'/> Login With Github
+          </button>
+        </div>
+        <div className='relative lg:hidden flex justify-center w-full '>
+          <button onClick={()=>signIn("github", {callbackUrl:"http://localhost:3000"})} 
+          className='text-2xl text-black bg-slate-50 my-12 px-6 py-6 hover:bg-sky-600
           rounded flex justify-center items-center gap-5 shadow font-bold transition ease-in-out delay-150 hover:scale-110 
           hover:text-white duration-300'>
             <BsGithub className='w-10 h-10'/> Login With Github
