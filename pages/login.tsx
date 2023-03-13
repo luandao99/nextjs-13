@@ -21,14 +21,14 @@ const Login = () => {
       <div className='flex justify-center items-center w-full lg:flex-row flex-col'>
         <Image src={giphy} alt="" width={700} height={700}/>
         <div className='relative lg:block hidden w-2/12'>
-          <button onClick={()=>signIn("github", {callbackUrl:"http://localhost:3000"})} className='text-2xl text-black bg-slate-50 my-12 px-6 py-6 absolute -mx-20 hover:bg-sky-600
+          <button onClick={()=>signIn("github", {callbackUrl:"http://localhost:3001"})} className='text-2xl text-black bg-slate-50 my-12 px-6 py-6 absolute -mx-20 hover:bg-sky-600
           rounded flex justify-center items-center gap-5 shadow font-bold transition ease-in-out delay-150 hover:scale-110 
           hover:text-white duration-300'>
             <BsGithub className='w-10 h-10'/> Login With Github
           </button>
         </div>
         <div className='relative lg:hidden flex justify-center w-full '>
-          <button onClick={()=>signIn("github", {callbackUrl:"http://localhost:3000"})} 
+          <button onClick={()=>signIn("github", {callbackUrl:"http://localhost:3001"})} 
           className='text-2xl text-black bg-slate-50 my-12 px-6 py-6 hover:bg-sky-600
           rounded flex justify-center items-center gap-5 shadow font-bold transition ease-in-out delay-150 hover:scale-110 
           hover:text-white duration-300'>
